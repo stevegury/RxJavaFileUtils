@@ -21,7 +21,7 @@ public class FileSystemEvent {
 
     private Path path;
 
-    FileSystemEvent(WatchEvent event) {
+    public FileSystemEvent(WatchEvent event) {
         WatchEvent.Kind kind = event.kind();
         if (StandardWatchEventKinds.OVERFLOW != kind) {
             this.path = (Path) event.context();
